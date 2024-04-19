@@ -1,0 +1,426 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background-image: url('../assets/background.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+
+/* Estilos CSS aqui */
+
+/* Estilizando o header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: rgba(47, 46, 65, 0.8); /* Cor de fundo com transparência */
+    color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilizando a marca */
+.brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.quest {
+    color: #8a2be2; /* Cor roxa */
+}
+
+/* Estilizando o menu */
+.header-center ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.header-center li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.header-center a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.2rem;
+}
+
+/* Estilizando os botões */
+.button {
+    background-color: #8a2be2; /* Cor roxa */
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 1rem;
+    border-radius: 5px;
+}
+
+.button:hover {
+    background-color: #6a1e9b; /* Cor roxa mais escura */
+}
+
+/* Efeito de sombra */
+.header-left, .header-right {
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.1));
+}
+
+
+/* Estilos CSS aqui */
+
+/* Estilizando o footer */
+footer {
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    margin-left: auto; /* Centralizando o footer */
+    margin-right: auto; /* Centralizando o footer */
+}
+
+/* Estilizando o link */
+.footer-content a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 0.8rem;
+}
+
+.footer-content a:hover {
+    text-decoration: underline;
+}
+
+
+
+
+
+.container-perguntas{
+    background-color: #fff; /* Cor de fundo */
+    border-radius: 20px; /* Bordas arredondadas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para efeito moderno */
+    max-width: 600px; /* Largura máxima */
+    margin: 40px auto; /* Centralização e espaçamento */
+    padding: 20px; /* Espaçamento interno */
+    display: flex; /* Usando flexbox */
+    flex-direction: column; /* Elementos em coluna */
+    align-items: center; /* Alinhamento central dos itens */
+}
+
+
+/* Transições suaves para todos os elementos interativos */
+a, button, input[type="submit"], input[type="button"] {
+    transition: all 0.3s ease;
+}
+
+/* Efeitos de hover para links e botões */
+a:hover, button:hover, input[type="submit"]:hover, input[type="button"]:hover {
+    background-color: #4a76a8; /* Mudança de cor de fundo */
+    color: #ffffff;
+    text-decoration: none;
+    transform: scale(1.05); /* Aumento leve no tamanho */
+}
+
+/* Responsividade com media queries */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+    header {
+        flex-direction: column;
+    }
+}
+
+/* Melhorias visuais com sombras e bordas arredondadas */
+.box {
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Refinando tipografia e cores */
+body {
+    font-size: 16px;
+    color: #333333;
+    background-color: #f4f4f4;
+}
+
+
+/* Ajustando especificidade para garantir aplicação das regras */
+html body {
+    background-color: #f4f4f4; /* Garantindo que essa regra sobreponha outras */
+}
+
+html body header {
+    background-color: rgba(47, 46, 65, 0.95); /* Ajuste na transparência */
+}
+
+/* Efeitos de hover mais específicos para garantir aplicação */
+html body a:hover, html body button:hover, html body input[type='submit']:hover, html body input[type='button']:hover {
+    border-color: #ffffff; /* Adicionando borda ao hover para maior visibilidade */
+    box-shadow: 0 0 10px rgba(74, 118, 168, 0.75); /* Sombra para destacar */
+}
+
+/* Media queries mais específicas para garantir aplicação em dispositivos móveis */
+@media (max-width: 768px) {
+    html body {
+        font-size: 14px; /* Tamanho menor de fonte para telas pequenas */
+    }
+    html body header {
+        flex-direction: column; /* Ajuste no header para dispositivos móveis */
+        padding: 10px;
+    }
+}
+
+
+/* Animações de entrada para elementos do formulário */
+@keyframes slideInFromLeft {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+input, select, textarea {
+    animation: 0.5s ease-out 0s 1 slideInFromLeft;
+}
+
+/* Feedback visual para campos focados */
+input:focus, select:focus, textarea:focus {
+    border: 2px solid #4a76a8;
+    background-color: #eef4fa;
+}
+
+/* Botões com efeito ao interagir */
+button {
+    padding: 10px 20px;
+    background-color: #4285F4;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+button:hover {
+    background-color: #357AE8;
+    transform: translateY(-2px);
+}
+
+button:active {
+    background-color: #2a62c0;
+    transform: translateY(1px);
+}
+
+/* Barra de progresso estilizada para o formulário */
+.progress-bar {
+    width: 0%;
+    background-color: #4CAF50;
+    height: 5px;
+    transition: width 0.4s ease;
+}
+
+
+
+/* Estilo base para campos de entrada de nome e turma */
+input[type="text"].floating-effect {
+    padding: 10px 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+    outline: none;
+}
+
+/* Efeito de foco e hover para flutuar o card */
+input[type="text"].floating-effect:hover,
+input[type="text"].floating-effect:focus {
+    border-color: #4a76a8;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+
+
+/* Estilo base para todos os inputs para padronizar tamanhos */
+input[type="text"], input[type="email"], input[type="number"], select {
+    width: 80%; /* ou outra medida que se adeque ao seu layout */
+    font-family: 'Poppins', sans-serif; /* Fonte padrão */
+    margin: 10px 0; /* Espaçamento para melhor visualização */
+}
+
+/* Fonte em estilo de pixel ao focar */
+@font-face {
+    font-family: 'Pixel';
+    src: url('path/to/your/pixel-font.woff2') format('woff2'); /* Substituir pelo caminho correto da fonte */
+}
+
+input[type="text"]:focus, input[type="email"]:focus, input[type="number"]:focus {
+    font-family: 'Pixel', monospace; /* Aplicando a fonte pixel */
+}
+
+/* Efeito de transição ao focar: aumentando o tamanho */
+input[type="text"]:focus, input[type="email"]:focus, input[type="number"]:focus {
+    transform: scale(1.05);
+    transition: transform 0.2s, font-family 0.2s;
+}
+
+
+
+/* Estrutura básica da barra de progresso */
+.progress-container {
+    width: 100%;
+    background-color: #ccc;
+    margin: 20px 0;
+}
+
+.progress-bar {
+    height: 20px;
+    background-color: #4CAF50;
+    width: 0%;
+    transition: width 0.4s ease-in-out;
+}
+
+/* Estilos específicos para cada etapa do formulário */
+.step1 .progress-bar { width: 33%; }
+.step2 .progress-bar { width: 66%; }
+.step3 .progress-bar { width: 100%; }
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.form-container {
+    animation: fadeInUp 0.8s ease-out forwards;
+}
+
+input[type="text"], input[type="email"], input[type="number"] {
+    transition: all 0.3s ease-in-out;
+}
+
+input[type="text"]:focus, input[type="email"]:focus, input[type="number"]:focus {
+    border-color: #4a76a8;
+    transform: scale(1.05);
+    box-shadow: 0 0 8px rgba(74, 118, 168, 0.5);
+}
+
+.button {
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.button:hover {
+    background-color: #6a1e9b; /* Cor mais escura */
+    transform: scale(1.1);
+}
+
+input:invalid {
+    border-color: rgb(50, 2, 2);
+}
+
+input:valid {
+    border-color: green;
+}
+
+.button {
+    cursor: pointer; /* Cursor de mão, comum para botões */
+}
+
+.button:hover {
+    cursor: url('path/to/custom-cursor.cur'), pointer; /* Cursor personalizado durante o hover */
+}
+
+#cursor-circle {
+    position: fixed;
+    width: 20px;
+    height: 20px;
+    margin: -10px 0 0 -10px;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 50%;
+    pointer-events: none;
+    mix-blend-mode: difference; /* Isso ajudará a se destacar em diferentes fundos */
+}
+
+
+.trail {
+    position: fixed;
+    width: 8px;
+    height: 8px;
+    background-color: rgba(202, 139, 139, 0.325);
+    border-radius: 50%;
+    pointer-events: none;
+    transition: opacity 0.5s linear;
+}
+
+
+/* Esconde o radio button original */
+.custom-radio input[type="radio"] {
+    display: none;
+}
+
+/* Estilo para o elemento que substitui o radio button */
+.custom-radio label {
+    position: relative;
+    padding-left: 35px;
+    cursor: pointer;
+    display: inline-block;
+    line-height: 20px;
+    color: #333;
+}
+
+/* Estilo do círculo externo */
+.custom-radio label:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #9C27B0;
+    border-radius: 50%;
+    background-color: white;
+    transition: background 0.3s, border-color 0.3s;
+}
+
+/* Estilo do círculo interno */
+.custom-radio input[type="radio"]:checked + label:after {
+    content: '';
+    position: absolute;
+    left: 5px;
+    top: 5px;
+    width: 10px;
+    height: 10px;
+    background-color: #9C27B0;
+    border-radius: 50%;
+    transition: background 0.3s;
+}
+
+
+.custom-radio label:before {
+    transition: transform 0.3s ease-in-out, border-color 0.3s ease;
+}
+
+.custom-radio input[type="radio"]:checked + label:before {
+    transform: scale(1.1);
+    border-color: #673AB7;
+}
+
+.custom-radio label:hover:before {
+    border-color: #D1C4E9;
+}
+
+
